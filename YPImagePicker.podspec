@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YPImagePicker'
-  s.version          = "5.2.2"
+  s.version          = "5.2.3"
   s.summary          = "Instagram-like image picker & filters for iOS"
   s.homepage         = "https://github.com/Yummypets/YPImagePicker"
   s.license          = { :type => "MIT", :file => "LICENSE" }
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "12.0"
   s.source_files = 'Source/**/*.swift'
   s.dependency 'SteviaLayout', '= 5.1.2'
-  s.dependency 'PryntTrimmerView', '= 4.0.2'
+  s.dependency 'YATrimmer'
   s.resources    = ['Source/Resources/*', 'Source/**/*.xib']
   s.description  = "Instagram-like image picker & filters for iOS supporting videos and albums"
   s.swift_versions = ['5.0', '5.1', '5.2', '5.3']
