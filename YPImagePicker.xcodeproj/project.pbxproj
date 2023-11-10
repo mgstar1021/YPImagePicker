@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -183,8 +183,6 @@
 		EBA37BC726F75151005DAAD4 /* YPImagePickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99C6D6991F1FB5C100711DB2 /* YPImagePickerLocalizable.strings */; };
 		EBA37BC926F757FF005DAAD4 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA37BC826F757FF005DAAD4 /* Bundle+Extensions.swift */; };
 		EBA37BCA26F757FF005DAAD4 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA37BC826F757FF005DAAD4 /* Bundle+Extensions.swift */; };
-		EBA37BCD26F75BCC005DAAD4 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = EBA37BCC26F75BCC005DAAD4 /* Stevia */; };
-		EBA37BD026F75C67005DAAD4 /* PryntTrimmerView in Frameworks */ = {isa = PBXBuildFile; productRef = EBA37BCF26F75C67005DAAD4 /* PryntTrimmerView */; };
 		EBB0FF7A20877A7500C84E25 /* YPVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0FF7920877A7500C84E25 /* YPVideoView.swift */; };
 		EBD2B641207B7D7400E711C2 /* YPMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD2B640207B7D7400E711C2 /* YPMediaItem.swift */; };
 		EBD66105208104EA00EA276E /* YPIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD66104208104EA00EA276E /* YPIcons.swift */; };
@@ -352,8 +350,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA37BCD26F75BCC005DAAD4 /* Stevia in Frameworks */,
-				EBA37BD026F75C67005DAAD4 /* PryntTrimmerView in Frameworks */,
 				4500082B3B62CA66D64563BC /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,8 +695,6 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				EBA37BCC26F75BCC005DAAD4 /* Stevia */,
-				EBA37BCF26F75C67005DAAD4 /* PryntTrimmerView */,
 			);
 			productName = YPIPExample;
 			productReference = EBA37B4F26F749C6005DAAD4 /* Example.app */;
@@ -763,8 +757,6 @@
 			);
 			mainGroup = 52412A891CA6114A0073C4BE;
 			packageReferences = (
-				EBA37BCB26F75BCC005DAAD4 /* XCRemoteSwiftPackageReference "Stevia" */,
-				EBA37BCE26F75C67005DAAD4 /* XCRemoteSwiftPackageReference "PryntTrimmerView" */,
 			);
 			productRefGroup = 52412A941CA6114A0073C4BE /* Products */;
 			projectDirPath = "";
@@ -845,13 +837,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YATrimmer/YATrimmer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YATrimmer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1206,8 +1198,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1236,11 +1227,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 5.2.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yummypets.YPImagePicker;
@@ -1273,11 +1260,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 5.2.2;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yummypets.YPImagePicker;
@@ -1305,10 +1288,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yummypets.YPIPExample;
@@ -1336,10 +1316,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yummypets.YPIPExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1380,38 +1357,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EBA37BCB26F75BCC005DAAD4 /* XCRemoteSwiftPackageReference "Stevia" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/freshOS/Stevia";
-			requirement = {
-				kind = exactVersion;
-				version = 5.1.2;
-			};
-		};
-		EBA37BCE26F75C67005DAAD4 /* XCRemoteSwiftPackageReference "PryntTrimmerView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HHK1/PryntTrimmerView";
-			requirement = {
-				kind = exactVersion;
-				version = 4.0.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EBA37BCC26F75BCC005DAAD4 /* Stevia */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EBA37BCB26F75BCC005DAAD4 /* XCRemoteSwiftPackageReference "Stevia" */;
-			productName = Stevia;
-		};
-		EBA37BCF26F75C67005DAAD4 /* PryntTrimmerView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EBA37BCE26F75C67005DAAD4 /* XCRemoteSwiftPackageReference "PryntTrimmerView" */;
-			productName = PryntTrimmerView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52412A8A1CA6114A0073C4BE /* Project object */;
 }
